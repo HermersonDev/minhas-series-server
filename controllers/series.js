@@ -39,12 +39,7 @@ const get = ({ db }) => async(req, res) => {
       })
       .from('series')
       .leftJoin('genres', 'genres.id', 'series.genre_id')
-    res.send({
-      data: series,
-      pagination: {
-        message: 'soon :)'
-      }
-    })
+    res.send(series);
   }
 }
 
