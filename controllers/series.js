@@ -27,7 +27,7 @@ const get = ({ db }) => async(req, res) => {
       .from('series')
       .leftJoin('genres', 'genres.id', 'series.genre_id')
     res.send({
-      data: series,
+      series: series,
       pagination: {
         message: 'soon :)'
       }
