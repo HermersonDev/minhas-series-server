@@ -5,12 +5,8 @@ const get = ({ db }) => async(req, res) => {
       name: 'genres.name'
     })
     .from('genres')
-  res.send({
-    data: genres,
-    pagination: {
-      message: 'soon :)'
-    }
-  })
+  res.send(genres);
+    
 }
 
 const create = ({ db }) => async(req, res) => {
