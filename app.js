@@ -1,11 +1,17 @@
 const express = require('express')
-const app = express()
 const path = require('path')
-
 const bodyParser = require('body-parser')
-app.use(bodyParser.json({ extended: true }))
+const cors = require('cors')
+
 
 const routes = require('./routes')
+
+const app = express()
+
+app.use(cors())
+
+app.use(bodyParser.json({ extended: true }))
+
 app.use(routes)
 
 if (process.env.NODE_ENV === 'production') {
