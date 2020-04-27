@@ -39,7 +39,7 @@ const initDB = async () => {
 
     await knex.insert({
       name: 'La casa de papel',
-      status: 'WATCHED',
+      status: 'to-watch',
       genre_id: 1,
       comments: '',
       poster: '//image.tmdb.org/t/p/original/yVUAfbrP5HDJugXraB7KQS0yz6Z.jpg',
